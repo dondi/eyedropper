@@ -5,10 +5,9 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
     <style>
-      .swatch {
-        width: 64px;
-        height: 64px;
-      }
+      body { margin: 2em auto; }
+      .swatch { height: 64px; }
+      canvas { cursor: crosshair; }
     </style>
   </head>
   <body>
@@ -40,13 +39,39 @@
         </div>
         <div class="col-md-3 col-xs-6">
           <h4>Swatch</h4>
+          <p class="level pixel"></p>
           <div class="swatch pixel"></div>
         </div>
       </div>
 
+      <p>&nbsp;</p>
+
       <div class="row">
         <div class="col-md-12 text-center">
-          <canvas class="eyedropper" width="495" height="760"></canvas>
+          <canvas class="eyedropper" width="495" height="750"></canvas>
+        </div>
+      </div>
+
+      <div class="row text-center">
+        <div class="col-md-3 col-xs-6">
+          <h4>Red</h4>
+          <p class="level red"></p>
+          <div class="swatch red"></div>
+        </div>
+        <div class="col-md-3 col-xs-6">
+          <h4>Green</h4>
+          <p class="level green"></p>
+          <div class="swatch green"></div>
+        </div>
+        <div class="col-md-3 col-xs-6">
+          <h4>Blue</h4>
+          <p class="level blue"></p>
+          <div class="swatch blue"></div>
+        </div>
+        <div class="col-md-3 col-xs-6">
+          <h4>Swatch</h4>
+          <p class="level pixel"></p>
+          <div class="swatch pixel"></div>
         </div>
       </div>
     </section>

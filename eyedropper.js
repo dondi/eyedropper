@@ -19,5 +19,33 @@ $(function () {
         loadCanvas($canvas, ctx, img);
     }, false);
 
-    img.src = 'https://40.media.tumblr.com/a391a1b4b46dd6b498d379e50f96ecbc/tumblr_nkcjuq8Tdr1tnacy1o1_500.jpg';
+    $canvas.mousemove(function (event) {
+        var offset = $(this).offset(),
+            x = event.pageX - Math.round(offset.left),
+            y = event.pageY - offset.top,
+            data = ctx.getImageData(x, y, 1, 1).data;
+
+        $(".level.red").text(data[0]);
+        $(".level.green").text(data[1]);
+        $(".level.blue").text(data[2]);
+        $(".level.pixel").text(data[0] + " " + data[1] + " " + data[2]);
+
+        $(".swatch.red").css({
+            'background-color': "rgb(" + data[0] + ", 0, 0)"
+        });
+
+        $(".swatch.green").css({
+            'background-color': "rgb(0, " + data[1] + ", 0)"
+        });
+
+        $(".swatch.blue").css({
+            'background-color': "rgb(0, 0, " + data[2] + ")"
+        });
+
+        $(".swatch.pixel").css({
+            'background-color': "rgb(" + data[0] + ", " + data[1] +", " + data[2] + ")"
+        });
+    });
+
+    img.src = 'images/dress.jpg';
 });
