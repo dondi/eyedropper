@@ -54,6 +54,7 @@ $(function () {
             touch = event.changedTouches[0];
 
         event.preventDefault();
+        event.stopPropagation();
         displayPixelInfo(touch.pageX - Math.round(offset.left), touch.pageY - offset.top);
     });
 
