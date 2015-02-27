@@ -49,8 +49,8 @@ $(function () {
         displayPixelInfo(event.pageX - Math.round(offset.left), event.pageY - offset.top);
     });
 
-    $canvas.bind('touchmove', function (event) {
-        var offset = $(this).offset(),
+    $canvas[0].addEventListener('touchmove', function (event) {
+        var offset = $canvas.offset(),
             touch = event.changedTouches[0];
 
         event.preventDefault();
