@@ -1,4 +1,4 @@
-# eyedrop
+# eyedropper
 
 This is a simple web page that is inspired by classic “eyedropper” image processing tool…and the great dress debate of 2015.
 
